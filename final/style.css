@@ -1,0 +1,330 @@
+/* fonts */
+.montecarlo-regular {
+  font-family: "MonteCarlo", cursive;
+  font-weight: 400;
+  font-style: normal;
+}  
+
+.akshar-font {
+font-family: "Akshar", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+}
+
+/* for all pages */
+a {
+  text-decoration: none;
+  color: #FFFCF3; /* Text color */
+}
+
+body {
+  background-color: #3B543F; 
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center;
+}
+
+/* cursor effect */
+.flower_animation {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.flower_animation div {
+  position: absolute;
+  pointer-events: none;
+  filter: drop-shadow(0 0 2px #FFFCF3);
+  animation: fadeInOut 2s linear infinite;
+}
+
+.flower_animation div:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(flower.png) no-repeat;
+  background-size: contain;
+  animation: move 2s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0) rotate(0deg);
+  }
+  100% {
+    transform: translate(300px) rotate(360deg);
+  }
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  20%,
+  80% {
+    opacity: 1;
+  }
+}
+
+/* header */
+header {
+  top: 0; /* Position the header at the top */
+  width: 100%;
+  display: flex;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  z-index: 999;
+  background-color: #3B543F; 
+  color: #FFFCF3; /* Text color */
+  text-decoration: none;
+  font-family: "Akshar", sans-serif;
+  font-size: 25px;
+}
+
+.left_header_content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the left */
+  margin: 20px;
+  width: calc(50% - 185px); /* Adjust width */
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.center_header_content {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin: 20px;
+  width: 120px;
+  cursor: pointer;
+  margin-top: 25px;
+  width: calc(50% - 185px); /* Adjust width */
+}
+
+.farm_store_button:hover {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Shadow effect */
+}
+
+.about_button:hover {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Shadow effect */
+}
+
+.center_header_content > * + * {
+  margin-left: 30px; /* Adjust space between items */
+}
+
+.right_header_content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align content to the right */
+  margin: 20px;
+  width: calc(50% - 185px); /* Adjust width */
+  cursor: pointer;
+  margin-top: 25px;
+  margin-right: 30px;
+}
+
+.right_header_content:hover {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Shadow effect */
+}
+
+.barn_icon {
+  height: 40px;
+  width: 40px;
+  margin-top: 10px;
+}
+
+.barn_icon:hover {
+  transform: scale(1.1);
+}
+
+/* HOME PAGE */
+/* ellipse */
+.ellipse {
+  width: 710px; /* Adjust the width to make it more elliptical or circular */
+  height: 260px; /* Adjust the height to make it more elliptical or circular */
+  background-color: #FFFCF3; /* Replace #3498db with the color you want for the ellipse */
+  border-radius: 50%; /* This creates a circular shape */
+  display: flex;
+  flex-direction: column; /* This makes the content inside the ellipse stack vertically */
+  justify-content: center;
+  align-items: center;
+  color: #144416; /* Text color */
+  bottom: 100px;
+  margin-top: 110px;
+}
+
+.line1 {
+  font-family: "MonteCarlo", cursive; /* Font family for the first line */
+  text-align: center; /* This aligns the text center horizontally */
+  font-size: 110px;
+  margin-top: -30px;
+}
+
+.line2 {
+  font-family: "Akshar", sans-serif; /* Font family for the second line */
+  font-size: 23px;
+  margin-left: 230px;
+  margin-top: -50px;
+}
+
+/* images */
+.home_page_photos_row {
+  left: 0;
+  right: 0;
+  bottom: 0; /* Position the images at the bottom of the page */
+  display: flex;
+  justify-content: space-between; /* Distribute space evenly between images */
+  align-items: center;
+  position: fixed;
+}
+
+.home_image {
+  height: 300px;
+  width: 240px; /* Adjust image width as needed */
+}
+
+/* FARM STORE PAGE */
+.ellipse1 {
+  width: 1000px; /* Adjust the width to make it more elliptical or circular */
+  height: 120px; /* Adjust the height to make it more elliptical or circular */
+  background-color: #FFFCF3; /* Replace #3498db with the color you want for the ellipse */
+  border-radius: 50%; /* This creates a circular shape */
+  display: flex;
+  flex-direction: column; /* This makes the content inside the ellipse stack vertically */
+  justify-content: center;
+  align-items: center;
+  color: #144416; /* Text color */
+  bottom: 100px;
+  margin-top: 75px;
+  margin-bottom: 40px;
+  border: 2px solid transparent; /* Add transparent border */
+  border-color: #144416;
+}
+
+.line3 {
+  font-family: "MonteCarlo", cursive; /* Font family for the first line */
+  text-align: center; /* This aligns the text center horizontally */
+  font-size: 50px;
+  color: #144416;
+}
+
+.hours_box {
+  border-radius: 10px;
+  height: 513px;
+  width: 1217px;
+  background-color: #FFFCF3;
+  display: flex;
+  flex-direction: row; /* This makes the content inside the ellipse stack vertically */
+  justify-content: space-evenly;
+  align-items: center;
+  color: #144416; /* Text color */
+  margin: 0 auto; /* Center the box horizontally */
+  border: 2px solid transparent; /* Add transparent border */
+  border-color: #144416;
+}
+
+.hours_box_text {
+  width: 50%; /* Take up the left half */
+  padding: 20px; /* Add some padding for spacing */
+  margin-left: 20px;
+}
+
+.hours_box_img {
+  border-radius: 10px;
+  position: relative;
+  width: 50%; /* Take up the right half */
+  padding: 20px; /* Add some padding for spacing */
+  margin-top: -440px;
+  margin-right: -60px;
+}
+
+.hours_box_img img {
+  border-radius: 10px;
+  position: absolute;
+  left: 0; /* Align the image to the left */
+  top: 0;
+  width: 550px; /* Fill the container horizontally */
+  height: 480px; /* Maintain aspect ratio */
+}
+
+.line4 {
+  font-family: "Akshar", sans-serif; /* Font family for the first line */
+  text-align: left; /* This aligns the text center horizontally */
+  font-size: 36px;
+  color: #144416;
+}
+
+.line5 {
+  font-family: "MonteCarlo", cursive; /* Font family for the first line */
+  text-align: left; /* This aligns the text center horizontally */
+  font-size: 70px;
+  color: #144416;
+}
+
+.list1 {
+  font-family: "Akshar", sans-serif; /* Font family for the first line */
+  text-align: left; /* This aligns the text center horizontally */
+  font-size: 32px;
+  color: #144416;
+}
+
+.info_box {
+  width: 1217px;
+  height: 50px;
+  background-color: #FFFCF3;
+  display: flex;
+  flex-direction: column; /* This makes the content inside the ellipse stack vertically */
+  justify-content: center;
+  align-items: center;
+  color: #144416; /* Text color */
+  margin: 0 auto; /* Center the box horizontally */
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: 2px solid transparent; /* Add transparent border */
+  border-color: #144416;
+}
+
+.line6 {
+  font-family: "Akshar", sans-serif; /* Font family for the first line */
+  text-align: center; /* This aligns the text center horizontally */
+  font-size: 24px;
+  color: #144416;
+  line-height: 100%;
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+  margin-top: 20px;
+}
+
+.store_img_grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Adjust the gap between images */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.store_img {
+  height: 330px;
+  width: 250px;
+  border-radius: 10px;
+  border: px solid transparent; /* Add transparent border */
+  transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Add smooth transition effect for both box-shadow and border-color */
+  border-color: #144416;
+}
+
+.store_img:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8); /* Add shadow on hover */
+  border-color: #FFFCF3;
+}

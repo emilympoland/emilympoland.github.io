@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&family=MonteCarlo&display=swap" rel="stylesheet"> 
+        <title> Friday Farms Farm Store Page </title>
+    </head>
+    <body>
+        <header>
+			<div class="header"></div>
+            <div class="left_header_content">
+                <a href="index.html">
+                    <img src="assets/img/barn_icon.png" class="barn_icon">
+                </a>
+            </div>
+                <div class="center_header_content">
+                    <a href="farm_store.html">FARM STORE</a>
+                    <div id="about">ABOUT</div>
+                </div>
+			
+                <div class="right_header_content">
+                    <div id="WHERE TO FIND US">WHERE TO FIND US</div>
+                </div>
+			</div>
+		</header>
+
+        <div class="flower_animation">
+            <script>
+                document.addEventListener('mousemove', function (e) {
+                let body = document.querySelector('.flower_animation');
+                let flower = document.createElement('div');
+                let x = e.pageX - 700; // Use pageX instead of offsetX
+                let y = e.pageY - 1000; // Use pageY instead of offsetY
+                flower.style.left = x + 'px';
+                flower.style.top = y + 'px';
+        
+                let size = Math.random() * 20;
+                flower.style.width = 20 + size + 'px';
+                flower.style.height = 20 + size + 'px';
+        
+                let rotation = Math.random() * 360;
+                flower.style.transform = `rotate(${rotation}deg)`
+        
+                body.appendChild(flower);
+        
+                setTimeout(function () {
+                  flower.remove();
+                }, 2000);
+              });
+            </script>
+          </div>
+
+        <div class="nasturtium">
+            <!-- <img src="assets/img/nasturtiums.jpeg"> -->
+            <div class="ellipse1">
+              <span class="line3">🌻  New Seasonal Produce and Gifts Every Week!   🌻</span>
+            </div>
+          </div>
+
+        <div class="hours_box">
+            <div class="hours_box_text">
+                <span class="line4">TAKE A VISIT TO OUR</span><br>
+                <span class="line5">Self-Service Farm Store</span><br>
+                <div class="list1">
+                    <ul>
+                        <li>OPEN FRIDAY-MONDAY 10AM-7PM</li>
+                        <li>LOCATED AT 3501 BEAVERTON VALLEY RD. FRIDAY HARBOR, WA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hours_box_img">
+                <img src="assets/img/farm_store.jpeg" alt="Image 1">
+            </div>
+        </div>
+
+        <div class="info_box">
+            <span class="line6">🌷🐓🍎 FARM-FRESH EGGS, FRUITS, VEGETABLES, FLOWERS, PLANTS, CRAFTS, SOUVENIRS, SKIN CARE, CANDLES, AND MORE! 💐🍐🌽</span><br>
+          </div>
+
+          <div class="store_img_grid">
+            <img class="store_img" src="assets/img/eggs.jpeg" alt="Image 1">
+            <img class="store_img" src="assets/img/cuces.jpeg" alt="Image 2">
+            <img class="store_img" src="assets/img/candle.jpeg" alt="Image 2">
+            <img class="store_img" src="assets/img/farm_store_goodies.jpeg" alt="Image 3">
+
+            <img class="store_img" src="assets/img/bouquets.jpeg" alt="Image 2">
+            <img class="store_img" src="assets/img/bird_seed.jpeg" alt="Image 3">
+            <img class="store_img" src="assets/img/pears_and_stella.jpeg" alt="Image 2">
+            <img class="store_img" src="assets/img/corn_kale.jpeg" alt="Image 3">
+
+            <img class="store_img" src="assets/img/flowers_cart.jpeg" alt="Image 2">
+            <img class="store_img" src="assets/img/peppermint_dahlias.jpeg" alt="Image 3">
+            <img class="store_img" src="assets/img/onions.jpeg" alt="Image 2">
+            <img class="store_img" src="assets/img/pumpkins_store.jpeg" alt="Image 3">
+        </div>
+
+    </body>
+</html>

@@ -1,6 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&family=MonteCarlo&display=swap" rel="stylesheet"> 
+  <title> Friday Farms Home Page </title>
+    </head>
     <body>
-        FINAL
+        <header>
+			<div class="header"></div>
+				<div class="left_header_content">
+                    <a href="index.html">
+                        <img src="assets/img/barn_icon.png" class="barn_icon">
+                    </a>
+                </div>
+                <div class="center_header_content">
+                    <div class="farm_store_button">
+                        <a href="farm_store.html">FARM STORE</a>
+                    </div>
+                    <div class="about_button">
+                        <div id="about">ABOUT</div>
+                    </div>
+                </div>
+			
+                <div class="right_header_content">
+                    <div id="WHERE TO FIND US">WHERE TO FIND US</div>
+                </div>
+			</div>
+		</header>
+
+        <div class="flower_animation">
+            <script>
+                document.addEventListener('mousemove', function (e) {
+                let body = document.querySelector('.flower_animation');
+                let flower = document.createElement('div');
+                let x = e.pageX - 750; // Use pageX instead of offsetX
+                let y = e.pageY - 300; // Use pageY instead of offsetY
+                flower.style.left = x + 'px';
+                flower.style.top = y + 'px';
+        
+                let size = Math.random() * 20;
+                flower.style.width = 20 + size + 'px';
+                flower.style.height = 20 + size + 'px';
+        
+                let rotation = Math.random() * 360;
+                flower.style.transform = `rotate(${rotation}deg)`
+        
+                body.appendChild(flower);
+        
+                setTimeout(function () {
+                  flower.remove();
+                }, 2000);
+              });
+            </script>
+          </div>
+
+        <div class="ellipse">
+            <span class="line1">Friday Farms</span><br>
+            <span class="line2">SAN JUAN ISLAND, WA</span>
+        </div>
+        <div class="home_page_photos_row">
+            <img class="home_image" src="assets/img/sunflower_wagon.jpeg" alt="Image 1">
+            <img class="home_image" src="assets/img/hazlenut_cheese.jpeg" alt="Image 2">
+            <img class="home_image" src="assets/img/flowers_cart.jpeg" alt="Image 2">
+            <img class="home_image" src="assets/img/spice_girls.jpeg" alt="Image 3">
+            <img class="home_image" src="assets/img/pumpkins.jpeg" alt="Image 2">
+            <img class="home_image" src="assets/img/stella_cat.jpeg" alt="Image 3">
+        </div>
     </body>
 </html>
